@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+</head>
+
+<body>
+
+	<style>
+		.indice{
+			display: none;
+		}
+		
+		.reponse{
+			display: none;
+		}
+	</style>
+	
+	<h1>Indices Challenge Sécurité 1</h1>
+
+	<p>Besoin d’un petit coup de pouce pour démarrer ? En panne d’inspiration pour trouver la prochaine étape ? Voici quelques indices pour vous aider à avancer ! </br></br> (Cliquez sur un indice ou sur sa réponse pour l'afficher)</p>
+	
+	<h2 id="1">Indice 1</h2>
+	
+	<div class="indice" id="indice1">
+		<p>Que signifient les nombres sur le post-it ? Peut-être peut-on les convertir ? Allez faire un tour sur le man de xxd...</p>
+	
+		<p id="Rep1">Réponse : </p>
+	
+		<p class="reponse" id="indiceRep1">Les nombres représentent les codes ASCII de caractères affichables, avec la commande xxd -r -p il est possible de retrouver une "phrase".</p>
+	</div>
+	
+	<h2 id="2">Indice 2</h2>
+	
+	<div class="indice" id="indice2">
+		<p>Hum cette phrase ne veut rien dire...elle est peut-être chiffrée ? Et si on utilisait l'aide du code python ?</p>
+	
+		<p id="Rep2">Réponse : </p>
+	
+		<p class="reponse" id="indiceRep2">La phrase trouvée précédemment doit être déchiffrée avec le code python en utilisant la clef Au_feu_du_Dragon (seule donnée du menu avec des "_").</p>
+	</div>
+	
+	<h2 id="3">Indice 3</h2>
+	
+	<div class="indice" id="indice3">
+		<p>Pi ? Mais c'est un nombre ça ! La phrase en mentionne peut-être d'autres ? Et si on calculait leur valeur ?</p>
+	
+		<p id="Rep3">Réponse : </p>
+	
+		<p class="reponse" id="indiceRep3">Pi = 3,1415926535897932384626433832795; exponentielle = 2,7182818284590452353602874713527; nombre d'or = 1,6180339887498948482045868343656</p>
+	</div>
+	
+	<h2 id="4">Indice 4</h2>
+	
+	<div class="indice" id="indice4">
+		<p>Bon à quoi peuvent bien servir ces chiffres ? Et s'il avaient un rapport avec les nombres associés au plat ?</p>
+	
+		<p id="Rep4">Réponse : </p>
+	
+		<p class="reponse" id="indiceRep4">Prendre les décimales de chaque nombre deux par deux (14, 15, 92 ... pour Pi par exemple) et éliminer toutes les lignes correspondantes.</p>
+	</div>
+
+	<script>
+		
+		function afficher(e){
+			document.getElementById("indice" + e.target.getAttribute("id")).removeAttribute("class");
+		}
+		
+		
+		var indices = document.getElementsByClassName("indice");
+		
+		for(var i = 0; i < indices.length; i++){
+		
+			var index = i + 1;
+			
+			document.getElementById(index).addEventListener("click", function(e){
+				afficher(e)
+			});
+			
+			document.getElementById("Rep" + index).addEventListener("click", function(e){
+				afficher(e)
+			});
+		}
+		
+	
+	</script>
+</body>
+</html>

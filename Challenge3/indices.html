@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+</head>
+
+<body>
+
+	<style>
+		.indice{
+			display: none;
+		}
+		
+		.reponse{
+			display: none;
+		}
+	</style>
+	
+	<h1>Indices Challenge Sécurité 3</h1>
+
+	<p>Besoin d’un petit coup de pouce pour démarrer ? En panne d’inspiration pour trouver la prochaine étape ? Voici quelques indices pour vous aider à avancer ! </br></br> (Cliquez sur un indice ou sur sa réponse pour l'afficher)</p>
+	
+	<h2 id="1">Indice 1</h2>
+	
+	<div class="indice" id="indice1">
+		<p>Quelles sont les machines présentes dans ce challenge ? Jetez un oeil à la capture wireshark et à la configuration réseau de votre machine pour relever les informations pertinentes.</p>
+	
+		<p id="Rep1">Réponse : </p>
+	
+		<p class="reponse" id="indiceRep1">Machine cliente (IP/MAC): 192.168.2.2 / 08:00:27:8c:8e:4d </br> Machine Serveur (IP/MAC) : 192.168.2.1 / 08:00:27:8f:a6:b1 </br> Attaquant (IP/MAC) : 192.168.2.7 / 08:00:27:59:15:bf</p>
+	</div>
+	
+	<h2 id="2">Indice 2</h2>
+	
+	<div class="indice" id="indice2">
+		<p>Bon et si nous déroutions le trafic client-serveur pour pouvoir le visualiser ? Familiarisez-vous avec l'ARP Poisoning et jouez avec le script d'attaque.</p>
+	
+		<p id="Rep2">Réponse : </p>
+	
+		<p class="reponse" id="indiceRep2">Lancez le script python avec les bonnes entrées : </br> target -> IP et MAC machine cliente </br> ip to spoof -> IP du serveur (IP à usurper vis à vis du client) </br> router -> Machine Serveur</p>
+	</div>
+	
+	<h2 id="3">Indice 3</h2>
+	
+	<div class="indice" id="indice3">
+		<p>Le Man In The Middle est en place ? Bien  joué ! Vérifiez que le trafic client-serveur peut être observé avec Wireshark...il y a comme un problème non ? Comment le résoudre ? Lisez la doc sur les iptables...</p>
+	
+		<p id="Rep3">Réponse : </p>
+	
+		<p class="reponse" id="indiceRep3">Le trafic client-serveur est chiffré (HTTPS). Le forum est accessible en HTTPS ET HTTP (communications non chiffrées), il faut donc forcer le client à passer en HTTP avec une règle iptables bloquant le trafic routé sur le port 443.</p>
+	</div>
+	
+	<h2 id="4">Indice 4</h2>
+	
+	<div class="indice" id="indice4">
+		<p>Le trafic est en clair maintenant ! Interceptez le mot de passe dans les échanges HTTP et connectez-vous avec le compte du suspect sur le forum !</p>
+	
+		<p id="Rep4">Réponse : </p>
+	
+		<p class="reponse" id="indiceRep4">Le flag de ce challenge se trouve dans les messages privés du compte volé.</p>
+	</div>
+
+	<script>
+		
+		function afficher(e){
+			document.getElementById("indice" + e.target.getAttribute("id")).removeAttribute("class");
+		}
+		
+		
+		var indices = document.getElementsByClassName("indice");
+		
+		for(var i = 0; i < indices.length; i++){
+		
+			var index = i + 1;
+			
+			document.getElementById(index).addEventListener("click", function(e){
+				afficher(e)
+			});
+			
+			document.getElementById("Rep" + index).addEventListener("click", function(e){
+				afficher(e)
+			});
+		}
+		
+	
+	</script>
+</body>
+</html>
