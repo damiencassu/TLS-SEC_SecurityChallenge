@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+</head>
+
+<body>
+
+	<style>
+		.indice{
+			display: none;
+		}
+		
+		.reponse{
+			display: none;
+		}
+	</style>
+	
+	<h1>Indices Challenge Sécurité 4</h1>
+
+	<p>Besoin d’un petit coup de pouce pour démarrer ? En panne d’inspiration pour trouver la prochaine étape ? Voici quelques indices pour vous aider à avancer ! </br></br> (Cliquez sur un indice ou sur sa réponse pour l'afficher)</p>
+	
+	<h2 id="1">Indice 1</h2>
+	
+	<div class="indice" id="indice1">
+		<p>Vous êtes un peu perdu ? Vous ne savez pas trop où chercher ? Essayer de regarder dans les clés USB</p>
+	
+		<p id="Rep1">Réponse : </p>
+	
+		<p class="reponse" id="indiceRep1">Essayer de récupérer des dossiers effacées des clés USB grâce à l'outil foremost</p>
+	</div>
+	
+	<h2 id="2">Indice 2</h2>
+	
+	<div class="indice" id="indice2">
+		<p>Les images effacées sont surement les plus intéressantes à récupérer sur les clés...</p>
+	
+		<p id="Rep2">Réponse : </p>
+	
+		<p class="reponse" id="indiceRep2">Utiliser la commande <b>sudo foremost -t jpg -i /dev/sdb1 </b></p>
+	</div>
+	
+	<h2 id="3">Indice 3</h2>
+	
+	<div class="indice" id="indice3">
+		<p>Il parait qu'un dicton dit qu'une image peut en cacher une autre...</p>
+	
+		<p id="Rep3">Réponse : </p>
+	
+		<p class="reponse" id="indiceRep3">Utiliser le script <i>stegano.py</i> pour essayer de retrouver une image cachée dans une autre image.</p>
+	</div>
+	
+
+	<script>
+		
+		function afficher(e){
+			document.getElementById("indice" + e.target.getAttribute("id")).removeAttribute("class");
+		}
+		
+		
+		var indices = document.getElementsByClassName("indice");
+		
+		for(var i = 0; i < indices.length; i++){
+		
+			var index = i + 1;
+			
+			document.getElementById(index).addEventListener("click", function(e){
+				afficher(e)
+			});
+			
+			document.getElementById("Rep" + index).addEventListener("click", function(e){
+				afficher(e)
+			});
+		}
+		
+	
+	</script>
+</body>
+</html>
