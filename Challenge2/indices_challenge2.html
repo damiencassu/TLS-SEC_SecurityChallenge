@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+</head>
+
+<body>
+
+	<style>
+		.indice{
+			display: none;
+		}
+		
+		.reponse{
+			display: none;
+		}
+	</style>
+	
+	<h1>Indices Challenge Sécurité 2</h1>
+
+	<p>Besoin d’un petit coup de pouce pour démarrer ? En panne d’inspiration pour trouver la prochaine étape ? Voici quelques indices pour vous aider à avancer ! </br></br> (Cliquez sur un indice ou sur sa réponse pour l'afficher)</p>
+	
+	<h2 id="1">Indice 1</h2>
+	
+	<div class="indice" id="indice1">
+		<p>Vous êtes un peu perdu ? Vous ne savez pas trop où chercher ? Posez vous la question où est ce qu'un attaquant pourrait cacher de l'information envoyée par mail ?</p>
+	
+		<p id="Rep1">Réponse : </p>
+	
+		<p class="reponse" id="indiceRep1">Concentrez-vous principalement sur les pièces jointes des mails, il y a surement des choses intéressantes à trouver...</p>
+	</div>
+	
+	<h2 id="2">Indice 2</h2>
+	
+	<div class="indice" id="indice2">
+		<p>Comment une adresse peut-elle être cachée dans un document ?</p>
+	
+		<p id="Rep2">Réponse : </p>
+	
+		<p class="reponse" id="indiceRep2">Vous pouvez utiliser des outils spécialisés pour avoir accès aux métadonnées des différents documents ou encore tout simplement les regarder de plus près.</p>
+	</div>
+	
+	<h2 id="3">Indice 3</h2>
+	
+	<div class="indice" id="indice3">
+		<p>Pour voir les métadonnées utiliser l'outil exiftool dans un terminal, regarder sa documentation vous trouverez la commande à taper pour obtenir toutes les métadonnées d'une image</p>
+	
+		<p id="Rep3">Réponse : </p>
+	
+		<p class="reponse" id="indiceRep3">La commande à taper pour obtenir les informations du fihchier <i>f.jpg</i> est <b>exiftool <i>f.jpg</i></b></p>
+	</div>
+	
+
+	<script>
+		
+		function afficher(e){
+			document.getElementById("indice" + e.target.getAttribute("id")).removeAttribute("class");
+		}
+		
+		
+		var indices = document.getElementsByClassName("indice");
+		
+		for(var i = 0; i < indices.length; i++){
+		
+			var index = i + 1;
+			
+			document.getElementById(index).addEventListener("click", function(e){
+				afficher(e)
+			});
+			
+			document.getElementById("Rep" + index).addEventListener("click", function(e){
+				afficher(e)
+			});
+		}
+		
+	
+	</script>
+</body>
+</html>
