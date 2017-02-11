@@ -4,8 +4,8 @@ This security challenge is organized as a police investigation divided in four p
 
 **Challenge 1 :** Steganography, Cryptography
 
-**Challenge 2 :**
+**Challenge 2 :** Steganography, Attack on password
 
 **Challenge 3 :** Man In The Middle, ARP Poisoning, Denial Of Service, Network
 
-**Challenge 4 :**
+**Challenge 4 :** Forensic, Steganography
