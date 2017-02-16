@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>TLS-SEC Security Challenge</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    
+    <!-- Styles css persos -->
+    <link href="css/styles.css" rel="stylesheet">
+
+		<link rel="icon" type="image/png" href="img/favicon.png"/>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+  
+  	<!-- Menu navigation -->
+  	<nav class="navbar navbar-inverse navbar-fixed-top hidden-xs">
+  		<div class="container">
+  			<ul class="nav navbar-nav">
+  				<li><a href="#accueil">Accueil</a></li>
+  				<li><a href="#challenge1">Challenge 1</a></li>
+  				<li><a href="#challenge2">Challenge 2</a></li>
+  				<li><a href="#challenge3">Challenge 3</a></li>
+  				<li><a href="#challenge4">Challenge 4</a></li>
+  				<li><a href="#apropos">A propos</a></li>
+  			</ul>
+  		</div>
+  	</nav>
+  	
+  	<div id="accueil" class="separateur"></div>
+    
+    <div class="container">
+    <!-- Accueil -->
+    	<div class="row">
+    		<div class="col-sm-12">
+					<div class="row">
+    				<div class="col-sm-12"><p id="logotlssec"><img src="img/logo-TLS-SEC.png" alt="Logo TLS-SEC"></p></div>
+    			</div>
+    			<div class="row">
+    				<div class="col-sm-12"><h1 id="titreGlobal">Challenge Sécurité Tutoriel</br>Une enquête palpitante</h1></div>
+    			</div>
+    			<div class="row">
+    				<div class="col-sm-12"><p>Afin de vous faire découvrir l'univers de la sécurité informatique, nous vous proposons quelques execices pratiques organisés sous forme d'enquête policière. L'enquête se déroule en quatre phases successives (challenges 1 à 4). Chaque phase aborde une ou plusieurs thématiques de la sécurité. Bien que l'idéal soit de commencer avec le challenge 1 pour terminer avec le challenge 4, toutes les phases sont indépendantes.</br></br>Tous les documents nécessaires à la compréhension et à la réalisation de l'étapeX sont réunis dans le dossier challengeX. Pour chaque challenge vous trouverez : un énoncé du challenge, une note technique expliquant les principes utiles au challenge, une page d'indices pour aiguiller et éventuellement débloquer votre progression et enfin les documents (codes, archives ...) propres à l'épreuve.<br></br> Bonne chance !</br></br><span id="warning">En cas de problème (fausse manip...) ou à l'arrivée d'un nouveau joueur, penser à éteindre, restaurer puis redémarrer les machines virtuelles !</span></p></div>
+    			</div>
+    		</div>
+    	</div>
+    
+    <div id="challenge1" class="separateur"></div>
+    	
+    <!-- Challenge 1 -->
+    	<div class="row">
+    		<div class="col-sm-12">
+    			<div class="row">
+    				<div class="col-sm-12"><h1>Challenge 1 : Un premier indice</h1></div>
+    			</div>
+    			<div class="row">
+    				<div class="col-sm-12">
+					<dl class="dl-horizontal">
+					<dt>Niveau de difficulté</dt>
+					<dd><span class="moyen">Moyen</span></dd>
+    					<dt>Temps Estimé</dt>
+					<dd>20 minutes</dd>
+					<dt>Descriptif</dt>
+					<dd>Ce premier challenge abordera des notions simples de stéganographie et une méthode historique de chiffrement au travers d'une énigme. Le joueur devra repérer et utiliser différents indices dissimulés dans un faux menu de restaurant afin de récupérer une adresse email.</dd>
+					<dt>Connaissances requises</dt>
+					<dd>Ligne de commande</dd>
+					</dl>
+				</div>
+    			</div>
+    		</div>
+    	</div>
+    
+    <div id="challenge2" class="separateur"></div>	
+    
+		<!-- Challenge 2 -->
+    	<div class="row">
+    		<div class="col-sm-12">
+    			<div class="row">
+    				<div class="col-sm-12"><h1>Challenge 2 : L'enquête avance</h1></div>
+    			</div>
+    			<div class="row">
+    				<div class="col-sm-12">
+					<dl class="dl-horizontal">
+					<dt>Niveau de difficulté</dt>
+					<dd><span class="facile">Facile</span></dd>
+    					<dt>Temps Estimé</dt>
+					<dd>10 minutes</dd>
+					<dt>Descriptif</dt>
+					<dd>Pour cette seconde épreuve le joueur devra parcourir une boite mail afin de découvirir l'adresse d'un lieu de rendez-vous. Brute force de mots de passe et stéganographie au programme !</dd>
+					<dt>Connaissances requises</dt>
+					<dd>Ligne de commande</dd>
+					</dl>
+				</div>
+    			</div>
+    		</div>
+    	</div>
+    
+    <div id="challenge3" class="separateur"></div>
+    	
+    <!-- Challenge 3 -->
+    	<div class="row">
+    		<div class="col-sm-12">
+    			<div class="row">
+    				<div class="col-sm-12"><h1>Challenge 3 : La planque</h1></div>
+    			</div>
+    			<div class="row">
+    				<div class="col-sm-12">
+					<dl class="dl-horizontal">
+					<dt>Niveau de difficulté</dt>
+					<dd><span class="moyen">Moyen</span></dd>
+    					<dt>Temps Estimé</dt>
+					<dd>15 minutes</dd>
+					<dt>Descriptif</dt>
+					<dd>Dans cette étape le réseau est à l'honneur ! Le joueur va en effet devoir réaliser une attaque Man In The Middle afin d'intercepter des identifiants de connexion échangées via HTTPS.</dd>
+					<dt>Connaissances requises</dt>
+					<dd>Wireshark - iptables - Réseaux TCP/IP</dd>
+					</dl>
+				</div>
+    			</div>
+    		</div>
+    	</div>
+    
+    <div  id="challenge4" class="separateur"></div>
+    	
+    <!-- Challenge 4 -->
+    	<div class="row">
+    		<div class="col-sm-12">
+    			<div class="row">
+    				<div class="col-sm-12"><h1>Challenge 4 : Forensic</h1></div>
+    			</div>
+    			<div class="row">
+    				<div class="col-sm-12">
+					<dl class="dl-horizontal">
+					<dt>Niveau de difficulté</dt>
+					<dd><span class="difficile">Difficile</span></dd>
+    					<dt>Temps Estimé</dt>
+					<dd>20 minutes</dd>
+					<dt>Descriptif</dt>
+					<dd>Dans l'épreuve finale sortez vos gants en latex et votre plus belle blouse blanche ! Le joueur doit retrouver des documents effacés sur des supports de stockage USB et les faire parler.</dd>
+					<dt>Connaissances requises</dt>
+					<dd>Ligne de commande</dd>
+					</dl>
+				</div>
+    			</div>
+    		</div>
+    	</div>
+    
+    <div  id="apropos" class="separateur"></div>
+    	
+    <!-- A propos -->
+    	<div class="row">
+    		<div class="col-sm-12">
+    			<div class="row">
+    				<div class="col-sm-12"><h1>A propos</h1></div>
+    			</div>
+    			<div class="row">
+    				<div class="col-sm-12"><p><span class="titreSecondaire">Contexte</span></br>L'ensemble des challenges proposés ont été imaginés et construits par Damien CASSU et Laura GRABOT dans le cadre de leur projet long clôturant leur dernière année d'école d'ingénieur (INSA Toulouse / TLS-SEC). Ces challenges ont pour but de présenter et promouvoir la sécurité informatique de manière ludique auprès des visiteurs de la <a href="https://toulousehackingconvention.fr/">Toulouse Hacking Convention</a> du 3 Mars 2017.</br>L'ensemble des documents proposés (hors machines virtuelles) peut être récupérés sur <a href="https://github.com/damiencassu/TLS-SEC_SecurityChallenge">GitHub</a>.</p></div>
+    			</div>
+    			<div class="row">
+    				<div class="col-sm-12"><p><span class="titreSecondaire">La formation TLS-SEC</span></br>TLS-SEC (pour Toulouse-Sécurité) est une formation en sécurité des systèmes d'information du groupement d'écoles d'ingénieurs Toulouse Ingénierie. Elle est plus spécifiquement portée par l'INP Toulouse, l'INSA Toulouse et l'ENAC.</br>TLS-SEC remplace et valide la dernière année des écoles d'ingénieurs partenaires. Ainsi les étudiants de ces écoles peuvent suivre TLS-SEC à la place de leur dernière année d'école d'ingénieur et obtenir le diplôme de leur école d'origine. Plus d'informations (programmes de cours...) peuvent être obtenues sur la <a href="https://tls-sec.github.io/tls-sec/">page officielle de la formation</a>.</p></div>
+    			</div>
+					<div class="row">
+						<div id="logoN7" class="col-sm-4"><p><img src="img/logo-N7.png" alt="Logo N7"></p></div>
+						<div id="logoINSA" class="col-sm-4"><p><img src="img/logo-INSA-Toulouse.png" alt="Logo INSA"></p></div>
+						<div id="logoENAC" class="col-sm-4"><p><img src="img/logo-ENAC.png" alt="Logo ENAC"></p></div>
+					</div>
+    		</div>
+    	</div>
+			    
+    </div>
+    
+  </body>
+</html>

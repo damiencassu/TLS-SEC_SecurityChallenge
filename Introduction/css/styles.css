@@ -1,0 +1,94 @@
+body{
+	text-align: justify;
+}
+
+.separateur{
+	padding-top: 70px;
+}
+
+.facile{
+	font-weight: bold;
+	color: #1db20d;
+}
+
+.moyen{
+	font-weight: bold;
+	color: #eca00e;
+}
+
+.difficile{
+	font-weight: bold;
+	color: #d50d0d;
+}
+
+.titreSecondaire{
+	font-weight: bold;
+	font-size: large;
+	padding-top: 15px;
+	padding-bottom: 15px;	
+}
+
+#titreGlobal{
+	padding-bottom: 50px;
+	text-align: center;
+}
+
+#warning{
+	font-weight: bold;
+	color: #d50d0d;
+}
+
+#logotlssec{
+	text-align: center;
+}
+
+#logotlssec img{
+	width: 30%;
+	min-width: 170px;
+}
+
+#logoN7{
+	height: 120px;
+	display: flex;
+	align-items: center;
+}
+
+#logoINSA{
+	height: 120px;
+	display: flex;
+	align-items: center;
+}
+
+#logoENAC{
+	height: 120px;
+	display: flex;
+	align-items: center;
+}
+
+#logoN7 img{
+	width: 20%;
+	min-width: 190px;
+}
+
+#logoINSA img{
+	width: 20%;
+	min-width: 190px;
+}
+
+#logoENAC img{
+	width: 15%;
+	min-width: 150px;
+}
+
+#logoENAC p{
+	text-align: right;
+}
+
+#logoINSA p{
+	text-align: center;
+}
+
+#logoN7 p{
+	text-align: left;
+}
+
